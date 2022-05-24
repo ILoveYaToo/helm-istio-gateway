@@ -1,3 +1,4 @@
+{{- if .Values.sslCert.enabled }}
 apiVersion: v1
 kind: Secret
 type: kubernetes.io/tls
@@ -8,6 +9,7 @@ metadata:
   namespace: istio-system
 stringData:
   tls.crt: |
-{{ .Values.ssl.cert | indent 4}}
+{{ .Values.sslCert.cert | indent 4}}
   tls.key: |
-{{ .Values.ssl.key  | indent 4}}
+{{ .Values.sslCert.key  | indent 4}}
+{{- end }}

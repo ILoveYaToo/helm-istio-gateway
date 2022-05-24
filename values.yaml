@@ -2,7 +2,8 @@ istio:
   ingress: ingressgateway
   hosts:
     - '*.svc.mydomain.com'
-ssl:
+sslSecret:
+  enabled: true
   cert: |
     cert-line-1
     cert-line-2
