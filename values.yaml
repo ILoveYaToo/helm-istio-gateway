@@ -1,0 +1,13 @@
+istio:
+  ingress: ingressgateway
+  hosts:
+    - '*.svc.mydomain.com'
+ssl:
+  cert: |
+    cert-line-1
+    cert-line-2
+    cert-line-3
+  key: |
+    key-line-1
+    key-line-2
+    key-line-3

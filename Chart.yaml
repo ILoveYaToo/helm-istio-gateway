@@ -1,0 +1,5 @@
+apiVersion: v2
+name: istio-gateway
+description: Deploys a Istio Gateway as well as SSL Certs
+type: application
+version: 1.0.0

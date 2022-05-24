@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/tls
+metadata:
+  name: {{ include "istio-gateway.fullname" . }}
+  labels:
+    {{- include "istio-gateway.labels" . | nindent 4 }}
+  namespace: istio-system
+stringData:
+  tls.crt: |
+{{ .Values.ssl.cert | indent 4}}
+  tls.key: |
+{{ .Values.ssl.key  | indent 4}}
